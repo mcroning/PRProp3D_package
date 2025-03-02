@@ -21,7 +21,7 @@ pip install PRProp3D
 ### Install from Source (GitHub)
 
 ```bash
-git clone https://github.com/mcroning/PRProp3D/PRProp3D_package.git
+git clone https://github.com/mcroning/PRProp3D_package.git
 cd PRProp3D_package
 pip install .
 ```
