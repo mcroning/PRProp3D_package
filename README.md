@@ -68,7 +68,7 @@ The simple example below [proptest.py](https://github.com/mcroning/PRProp3D/blob
 
 
 ### Example: Two beam coupling of Gaussian Beams
-The following example show the use of the package for two interacting gaussian beams at steady state. The beam ratio is 6.67, the coupling constant length product is -3, the angle of incidence of beam 1 is 0.16 radians, that of beam 2 is -0.16 radians. The beam waists are 100 $\mu$m and they cross halfway through the interaction length.
+The following example show the use of the package for two interacting gaussian beams at steady state. The beam ratio is 6.67, the coupling constant length product is -3, the angle of incidence of beam 1 is 0.16 radians, that of beam 2 is -0.16 radians. The beam waists are 100 $\mu m$ and they cross halfway through the interaction length.
     from PRProp3D import *
     import matplotlib
     import matplotlib.pyplot as plt
@@ -132,7 +132,7 @@ The following example show the use of the package for two interacting gaussian b
       prdict['windowedge']=0
 
 
-    # call propagator to popagate input
+    # call propagator to propagate input
     amp,derived,output=propagate(prdict,outputs=['ampxz','dnxz'])
 
     print('calculated gain',output.gainout.gain)
