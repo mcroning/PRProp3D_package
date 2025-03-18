@@ -70,11 +70,16 @@ The simple example below [proptest.py](https://github.com/mcroning/PRProp3D/blob
 ### Example: Two beam coupling of Gaussian Beams
 The following example show the use of the package for two interacting gaussian beams at steady state. The beam ratio is 6.67, the coupling constant length product is -3, the angle of incidence of beam 1 is 0.16 radians, that of beam 2 is -0.16 radians. The beam waists are 100 $\mu m$ and they cross halfway through the interaction length.
 
+    !pip install PRProp3D
     from PRProp3D import *
     import matplotlib
     import matplotlib.pyplot as plt
     import numpy as np
     import torch
+    
+    
+    # Check if CUDA (GPU support) is available
+    if torch.cuda.is_available(): GPU = True
     
     prdict={
     'gl':-3,
@@ -137,11 +142,19 @@ The following example show the use of the package for two interacting gaussian b
     amp,derived,output=propagate(prdict,outputs=['ampxz','dnxz'])
     
     print('calculated gain',output.gain)
-    imoutp=np.rot90(abs(output.amps[0])**2,k=3).get()
-    imoutm=np.rot90(abs(output.amps[1])**2,k=3).get()
+    amps=output.amps
+    if GPU:
+      amps[0] = (amps[2]).get()
+      amps[1] = (amps[3]).get() 
+      amps[2] = (amps[2]).get()
+      amps[3] = (amps[3]).get()
     
-    iminp=np.rot90(abs(output.amps[2])**2,k=3).get()
-    iminm=np.rot90(abs(output.amps[3])**2,k=3).get()
+    
+    imoutp=np.rot90(abs(amps[0])**2,k=3)
+    imoutm=np.rot90(abs(amps[1])**2,k=3)
+    
+    iminp=np.rot90(abs(amps[2])**2,k=3)
+    iminm=np.rot90(abs(amps[3])**2,k=3)
     
     xaper=prdict['xaper']
     yaper=prdict['yaper']
