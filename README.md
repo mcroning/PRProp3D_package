@@ -79,7 +79,7 @@ The following example show the use of the package for two interacting gaussian b
     
     
     # Check if CUDA (GPU support) is available
-    if torch.cuda.is_available(): GPU = True
+    GPU = torch.cuda.is_available()
     
     prdict={
     'gl':-3,
@@ -144,8 +144,8 @@ The following example show the use of the package for two interacting gaussian b
     print('calculated gain',output.gain)
     amps=output.amps
     if GPU:
-      amps[0] = (amps[2]).get()
-      amps[1] = (amps[3]).get() 
+      amps[0] = (amps[0]).get()
+      amps[1] = (amps[1]).get() 
       amps[2] = (amps[2]).get()
       amps[3] = (amps[3]).get()
     
@@ -206,6 +206,7 @@ The following example show the use of the package for two interacting gaussian b
     ax4.set_title('output')
     
     plt.show()
+
 If you run this code, you shouls see the following output:\
 elapsed time  44.696675062179565 
 calculated gain 1.3683214544947206
