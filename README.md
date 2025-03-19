@@ -207,9 +207,10 @@ The following example show the use of the package for two interacting gaussian b
     
     plt.show()
 
-If you run this code, you shouls see the following output:\
+If you run this code, you should see the following output:\
 elapsed time  44.696675062179565 
 calculated gain 1.3683214544947206
+The elapsed time depends, of course, on which platform you are using.
 
 The calculated gain is less than the nominal gain because the beams have waists of only 100 $\mu$m and have 0.16 radian half angle between them so they interact for only about half of the 4mm long propagation. The elapsed time on an Apple silicon M1 Pro is 47 seconds.  It is more than 100 times faster on an INVIDIA Tesla A100 GPU (0.42 seconds)
 
