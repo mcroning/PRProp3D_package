@@ -1,3 +1,18 @@
+Metadata-Version: 2.4
+Name: PRProp3D
+Version: 0.3.4
+Summary: photorfractive propagator for CPU and GPU
+Author-email: Mark Cronin-Golomb <mark.croningolomb@gmail.com>
+License-Expression: MIT AND (Apache-2.0 OR BSD-2-Clause)
+Project-URL: Homepage, https://github.com/mcroning/PRProp3D_package
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scipy>=1.0
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Dynamic: license-file
+
 # PRProp3D
 PRProp3D is a scalar nonlinear optical forward beam propagation package that will run with or without GPU support. It uses the torch package only to determine the availability of a suitable GPU. It was developed to enable modelling of photorefractive nonlinear optical effects such as two beam coupling, image amplification and beam fanning. Full details of the package performance including application to image amplification and solitons can be found at [Three-Dimensional Scalar Time-Dependent Photorefractive Beam Propagation Model](https://www.mdpi.com/3156550)
 
