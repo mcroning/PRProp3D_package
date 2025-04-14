@@ -1,4 +1,8 @@
 *.pyc
 __pycache__/
 *.pkl
+<<<<<<< HEAD
 build/
+=======
+/build
+>>>>>>> bf5c22c8a3d7f5d84ca2111bba7b3188fd911d13
