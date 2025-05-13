@@ -104,6 +104,7 @@ class Derived: #derived attributes and their functions ###required
       lm=prdata.lm
       refin=prdata.refin
       arrin=prdata.arrin
+      arrin=cp.array(arrin)
       xsamp=prdata.xsamp ; ysamp=prdata.ysamp
       x,y,z=beam.coord  #rotated
       w0x=beam.w0
@@ -170,7 +171,7 @@ class Derived: #derived attributes and their functions ###required
     """
     imtype=prdata.image_type
     rat=prdata.rat
-    arrin=prdata.arrin
+    #arrin=prdata.arrin
 
     # beam contributions from beam ratio
     a1r=cp.sqrt(1.0/(1.0+rat))
