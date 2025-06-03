@@ -64,13 +64,12 @@ gain(amp,prdict,derived)
   * amps: list containing separated complex amplitudes for imput and output beams
     * [ampp,ampm,amp0p,amp0m] (beams 1 and 2 outputs, beams 1 and 2 outputs)
 
-The simple example below [proptest.py](https://github.com/mcroning/PRProp3D/blob/ef17a553d5ead1b3d1ca2a634381f3ec4d13d9d0/Package%20README%20usage%20examples/proptest_full.py) and another which allows images to be loaded on the beams [proptest_full.py](https://github.com/mcroning/PRProp3D/blob/ef17a553d5ead1b3d1ca2a634381f3ec4d13d9d0/Package%20README%20usage%20examples/proptest_full.py) are avalable at the Github repository
+The simple example below [proptest.py](https://github.com/mcroning/PRProp3D/blob/ef17a553d5ead1b3d1ca2a634381f3ec4d13d9d0/Package%20README%20usage%20examples/protest.py) and another which allows images to be loaded on the beams [proptest_full.py](https://github.com/mcroning/PRProp3D/blob/ef17a553d5ead1b3d1ca2a634381f3ec4d13d9d0/Package%20README%20usage%20examples/proptest_full.py) are avalable at the Github repository
 
 
 ### Example: Two beam coupling of Gaussian Beams
 The following example show the use of the package for two interacting gaussian beams at steady state. The beam ratio is 6.67, the coupling constant length product is -3, the angle of incidence of beam 1 is 0.16 radians, that of beam 2 is -0.16 radians. The beam waists are 100 $\mu m$ and they cross halfway through the interaction length.
 
-    !pip install PRProp3D
     from PRProp3D import *
     import matplotlib
     import matplotlib.pyplot as plt
